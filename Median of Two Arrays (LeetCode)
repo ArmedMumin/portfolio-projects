@@ -1,0 +1,10 @@
+Python code to solve median of two arrays in LeetCode
+
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        merged= sorted(nums1 + nums2)
+        if len(merged) % 2 == 0:
+            # return (added_lst[len(added_lst)//2] + added_lst[len(added_lst//2) -1]) / 2
+            return (merged[len(merged)//2] + merged[(len(merged)//2) - 1]) / 2
+        else:
+            return merged[len(merged)//2]
